@@ -1,0 +1,5 @@
+
+enable-vote-app: true
+enable-result-app: true
+enable-worker: true
+enable-visualizer: true
