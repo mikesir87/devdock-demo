@@ -29,7 +29,7 @@ services:
     image: dockersamples/examplevotingapp_vote:before
     x-enabled: ${enable-vote-app}
     x-devdock-description: "Vote App"
-    x-devdock-setting: enable-vote-app
+    x-devdock-setting-name: enable-vote-app
     ports:
       - 5000:80
     networks:
@@ -47,7 +47,7 @@ services:
     image: dockersamples/examplevotingapp_result:before
     x-enabled: ${enable-result-app}
     x-devdock-description: "Result App"
-    x-devdock-setting: enable-result-app
+    x-devdock-setting-name: enable-result-app
     ports:
       - 5001:80
     networks:
@@ -66,7 +66,7 @@ services:
     image: dockersamples/examplevotingapp_worker
     x-enabled: ${enable-worker}
     x-devdock-description: "Background Worker"
-    x-devdock-setting: enable-worker
+    x-devdock-setting-name: enable-worker
     networks:
       - frontend
       - backend
@@ -86,7 +86,7 @@ services:
     image: dockersamples/visualizer:stable
     x-enabled: ${enable-visualizer}
     x-devdock-description: "Visualizer"
-    x-devdock-setting: enable-visualizer
+    x-devdock-setting-name: enable-visualizer
     ports:
       - "8080:8080"
     stop_grace_period: 1m30s
